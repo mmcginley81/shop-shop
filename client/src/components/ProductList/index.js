@@ -20,7 +20,7 @@ function ProductList() {
     if(data) {
       dispatch({
            type: UPDATE_PRODUCTS,
-          products: data.products
+            products: data.products
         });
     }
   }, [data, dispatch]);
@@ -36,7 +36,7 @@ function ProductList() {
   return (
     <div className="my-2">
       <h2>Our Products:</h2>
-      {products.length ? (
+      {state.products.length ? (
         <div className="flex-row">
             {filterProducts().map(product => (
                 <ProductItem
